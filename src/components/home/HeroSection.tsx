@@ -2,10 +2,8 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Award, GraduationCap, Clock } from "lucide-react";
 import heroImage from "@/assets/hero-dental.jpg";
-
 export const HeroSection = () => {
-  return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-primary/5 via-background to-healthcare-turquoise-light/20">
+  return <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-primary/5 via-background to-healthcare-turquoise-light/20">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-20 right-10 w-72 h-72 bg-accent/20 rounded-full blur-3xl" />
@@ -16,18 +14,16 @@ export const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="animate-slide-up">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium mb-6 bg-primary text-primary-foreground">
               <Award className="h-4 w-4" />
-              16 años de experiencia
+              Dra. Maria Gabriela Castro
             </div>
             
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
-              Tu <span className="text-accent">Odontólogo</span> de confianza en Naguanagua
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">Una Sonrisa sana ​embellece tu rostro<span className="text-accent">Sonrisa sana   </span> ​sana embellece tu rostro                
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 max-w-xl">
-              Soy la Dra. María Gabriela Castro. Ofrezco atención odontológica integral 
-              con un enfoque humano y profesional para cuidar la salud de tu sonrisa.
+              Consulta Odontológica en Naguanagua con más de 16 años de experiencia.    
             </p>
 
             {/* Trust Badges */}
@@ -47,7 +43,7 @@ export const HeroSection = () => {
                 </div>
                 <div>
                   <p className="text-sm font-medium text-foreground">Atención</p>
-                  <p className="text-xs text-muted-foreground">Lun - Vie</p>
+                  <p className="text-xs text-muted-foreground">Lun - Sab</p>
                 </div>
               </div>
             </div>
@@ -72,11 +68,7 @@ export const HeroSection = () => {
           <div className="relative animate-fade-in hidden lg:block">
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-tr from-accent/30 to-primary/20 rounded-3xl blur-2xl" />
-              <img
-                src={heroImage}
-                alt="Consultorio dental moderno de la Dra. María Gabriela Castro"
-                className="relative rounded-3xl shadow-elevated object-cover w-full h-[500px]"
-              />
+              <img src={heroImage} alt="Consultorio dental moderno de la Dra. María Gabriela Castro" className="relative rounded-3xl shadow-elevated object-cover w-full h-[500px]" />
               
               {/* Floating Card */}
               <div className="absolute -bottom-6 -left-6 bg-card p-6 rounded-2xl shadow-card">
@@ -94,6 +86,5 @@ export const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
