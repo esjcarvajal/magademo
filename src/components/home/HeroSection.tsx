@@ -19,7 +19,7 @@ export const HeroSection = () => {
               Dra. Maria Gabriela Castro
             </div>
             
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">Una Sonrisa sana ​embellece tu rostro<span className="text-accent">Sonrisa sana   </span> ​sana embellece tu rostro                
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">Una <span className="text-accent">Sonrisa sana   </span> ​sana embellece tu rostro                
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 max-w-xl">
