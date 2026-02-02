@@ -50,16 +50,10 @@ export const AboutSection = () => {
               Dra. María Gabriela Castro
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Soy odontóloga egresada de la Universidad de Carabobo con más de 16 años 
-              de experiencia en el ejercicio profesional. Mi pasión por la odontología 
-              me ha llevado a especializarme en diversas áreas para ofrecer una atención 
-              integral a mis pacientes.
+              Soy odontóloga egresada de la Universidad de Carabobo con más de 16 años de experiencia en el ejercicio profesional. 
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Durante 11 años tuve el honor de ser docente de <strong>Patología Bucal</strong> en 
-              la Facultad de Odontología de la Universidad de Carabobo, lo que me permitió 
-              desarrollar un profundo conocimiento en el diagnóstico de lesiones y 
-              enfermedades de la cavidad oral.
+              Durante 11 años tuve el honor de ser docente de <strong>Patología Bucal</strong> Me desempeño  como docente de Patología Bucal en la Facultad de Odontología de la Universidad de Carabobo.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               Mi compromiso es brindarte una atención personalizada, explicándote cada 
