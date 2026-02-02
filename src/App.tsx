@@ -10,6 +10,10 @@ import ServicioDetalle from "./pages/ServicioDetalle";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Contacto from "./pages/Contacto";
+import Estudiantes from "./pages/Estudiantes";
+import MedicinaOdontologia from "./pages/MedicinaOdontologia";
+import LibrosPatologia from "./pages/LibrosPatologia";
+import ExploracionClinica from "./pages/ExploracionClinica";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +32,10 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/contacto" element={<Contacto />} />
+          <Route path="/estudiantes" element={<Estudiantes />} />
+          <Route path="/estudiantes/medicina-odontologia" element={<MedicinaOdontologia />} />
+          <Route path="/estudiantes/libros-patologia" element={<LibrosPatologia />} />
+          <Route path="/estudiantes/exploracion-clinica" element={<ExploracionClinica />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

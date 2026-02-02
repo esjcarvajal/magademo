@@ -1,0 +1,425 @@
+import { Layout } from "@/components/layout";
+import { Breadcrumbs } from "@/components/ui/breadcrumbs";
+import exploracionImage from "@/assets/exploracion-clinica.png";
+import { 
+  Stethoscope, 
+  ClipboardCheck, 
+  Search, 
+  FileText, 
+  BookOpen,
+  Eye,
+  Hand,
+  Wind,
+  FlaskConical,
+  Camera
+} from "lucide-react";
+
+const ExploracionClinica = () => {
+  return (
+    <Layout>
+      <section className="py-16 md:py-24">
+        <div className="healthcare-container">
+          <Breadcrumbs
+            items={[
+              { label: "Estudiantes", href: "/estudiantes" },
+              { label: "Exploración Clínica" },
+            ]}
+          />
+
+          <div className="max-w-4xl mx-auto">
+            {/* Hero with Featured Image */}
+            <div className="mb-12">
+              <div className="relative rounded-2xl overflow-hidden mb-8">
+                <img
+                  src={exploracionImage}
+                  alt="Objetivos de la exploración clínica - Profesional dental realizando examen"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <h1 className="text-3xl md:text-4xl font-bold text-foreground text-center">
+                Objetivos de la Exploración Clínica
+              </h1>
+            </div>
+
+            {/* Content */}
+            <div className="prose prose-lg max-w-none">
+              {/* Objectives Section */}
+              <div className="grid md:grid-cols-2 gap-6 not-prose mb-12">
+                <div className="bg-card border border-border rounded-xl p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Stethoscope className="h-5 w-5 text-accent" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-2">Evaluar el estado de salud</h3>
+                      <p className="text-sm text-muted-foreground">
+                        Identificación de cualquier anomalía en los dientes, las encías, la mucosa yugal, 
+                        la lengua, el piso de la boca y el paladar.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-card border border-border rounded-xl p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Search className="h-5 w-5 text-accent" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-2">Detectar signos y síntomas</h3>
+                      <p className="text-sm text-muted-foreground">
+                        Revelar signos tempranos de caries, enfermedades periodontales, infecciones, 
+                        cáncer bucal y trastornos temporomandibulares.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-card border border-border rounded-xl p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <ClipboardCheck className="h-5 w-5 text-accent" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-2">Establecer un diagnóstico</h3>
+                      <p className="text-sm text-muted-foreground">
+                        En conjunto con la historia clínica y otros exámenes complementarios, 
+                        permite establecer un diagnóstico preciso.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-card border border-border rounded-xl p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <FileText className="h-5 w-5 text-accent" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-2">Planificar el tratamiento</h3>
+                      <p className="text-sm text-muted-foreground">
+                        El diagnóstico obtenido sirve de base para planificar el tratamiento 
+                        adecuado para cada paciente.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Instrumental */}
+              <h2 className="text-2xl font-bold text-foreground mt-12 mb-6">
+                Instrumental necesario para el examen clínico
+              </h2>
+
+              <ul className="space-y-3 text-muted-foreground">
+                <li><strong>Espejo bucal:</strong> Permite inspeccionar las áreas de difícil acceso de la cavidad bucal.</li>
+                <li><strong>Bajalengua:</strong> Ayuda a separar la lengua del paladar para visualizar mejor la mucosa del piso de la boca.</li>
+                <li><strong>Sonda periodontal:</strong> Se utiliza para evaluar el estado de las encías y detectar bolsas periodontales.</li>
+                <li><strong>Aguja:</strong> Se utiliza para realizar punciones en caso de ser necesario.</li>
+                <li><strong>Bisturí:</strong> Se utiliza para realizar incisiones en caso de ser necesario.</li>
+                <li><strong>Bulbo de goma:</strong> Se utiliza para aspirar líquido o pus de lesiones.</li>
+                <li><strong>Vidrio o lámina transparente:</strong> Se utiliza para realizar diascopia.</li>
+                <li><strong>Cámara fotográfica:</strong> Se utiliza para documentar los hallazgos.</li>
+                <li><strong>Separadores bucales:</strong> Permite retraer los tejidos para la correcta evaluación y registro fotográfico.</li>
+              </ul>
+
+              {/* Pasos de la exploración */}
+              <h2 className="text-2xl font-bold text-foreground mt-12 mb-6">
+                Pasos de la exploración clínica
+              </h2>
+
+              {/* Inspección */}
+              <div className="bg-card border border-border rounded-xl p-6 mb-6 not-prose">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
+                    <Eye className="h-5 w-5 text-accent" />
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground">Inspección</h3>
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  La inspección es el primer paso en la evaluación física. Se realiza mediante 
+                  la observación visual total o parcial del cuerpo, examinando estructuras orales 
+                  en busca de cambios de color, textura, inflamación o lesiones.
+                </p>
+                <ul className="space-y-2 text-muted-foreground text-sm">
+                  <li><strong>Iluminación:</strong> Fuente de luz adecuada (lámparas frontales, de mano o luz natural).</li>
+                  <li><strong>Simetría:</strong> Comparar ambos lados para detectar asimetrías.</li>
+                  <li><strong>Color:</strong> Observar mucosas (rosa pálido), encías (rosa coral), lengua (rojo rosado).</li>
+                  <li><strong>Textura:</strong> Palpar superficies para evaluar textura normal (lisa, húmeda, firme).</li>
+                  <li><strong>Lesiones:</strong> Buscar úlceras, manchas, placas, nódulos o verrugas.</li>
+                </ul>
+              </div>
+
+              {/* Palpación */}
+              <div className="bg-card border border-border rounded-xl p-6 mb-6 not-prose">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
+                    <Hand className="h-5 w-5 text-accent" />
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground">Palpación</h3>
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  Técnica fundamental para evaluar el estado de los tejidos corporales mediante el tacto.
+                </p>
+                <ul className="space-y-2 text-muted-foreground text-sm">
+                  <li><strong>Palpación bimanual:</strong> Una mano en el exterior y otra en el interior para mayor precisión.</li>
+                  <li><strong>Ganglios linfáticos:</strong> Palpar ganglios del cuello y debajo de la mandíbula.</li>
+                </ul>
+              </div>
+
+              {/* Olfacción */}
+              <div className="bg-card border border-border rounded-xl p-6 mb-6 not-prose">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
+                    <Wind className="h-5 w-5 text-accent" />
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground">Olfacción</h3>
+                </div>
+                <p className="text-muted-foreground">
+                  Evaluar el olor oral del paciente. El olor normal es neutro o ligeramente a menta. 
+                  La halitosis puede indicar higiene deficiente o enfermedad periodontal. Olores fétidos 
+                  pueden indicar faringitis crónica, amigdalitis o abscesos respiratorios.
+                </p>
+              </div>
+
+              {/* Pruebas especiales */}
+              <div className="bg-card border border-border rounded-xl p-6 mb-6 not-prose">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
+                    <FlaskConical className="h-5 w-5 text-accent" />
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground">Pruebas especiales</h3>
+                </div>
+                <ul className="space-y-2 text-muted-foreground text-sm">
+                  <li><strong>Punción:</strong> Obtener muestra de líquido o pus con asepsia estricta.</li>
+                  <li><strong>Exploración con sonda:</strong> Buscar irregularidades o bolsas periodontales.</li>
+                  <li><strong>Bulbo-aspiración:</strong> Aspirar líquido o pus de lesiones.</li>
+                  <li><strong>Diascopia:</strong> Evaluar el color de lesiones submucosas mediante presión con vidrio.</li>
+                  <li><strong>Fotografía:</strong> Documentar hallazgos y evolución de lesiones.</li>
+                </ul>
+              </div>
+
+              {/* Orden del examen */}
+              <h2 className="text-2xl font-bold text-foreground mt-12 mb-6">
+                Examen clínico: Orden de evaluación
+              </h2>
+
+              <p className="text-muted-foreground mb-4">
+                Realizar un examen metódico siguiendo un orden específico:
+              </p>
+
+              <ol className="list-decimal list-inside space-y-2 text-muted-foreground mb-6">
+                <li>Labios</li>
+                <li>Mucosa yugal</li>
+                <li>Lengua</li>
+                <li>Piso de boca</li>
+                <li>Paladar duro y blando</li>
+                <li>Istmo de las fauces</li>
+                <li>Encías</li>
+              </ol>
+
+              <div className="bg-accent/5 border-l-4 border-accent p-6 rounded-r-lg mb-8">
+                <p className="text-foreground font-medium m-0">
+                  Conocer lo normal es esencial para identificar lo patológico.
+                </p>
+              </div>
+
+              {/* Registro de hallazgos */}
+              <h2 className="text-2xl font-bold text-foreground mt-12 mb-6 flex items-center gap-3">
+                <Camera className="h-6 w-6 text-accent" />
+                Registro de los hallazgos clínicos
+              </h2>
+
+              <p className="text-muted-foreground">
+                Los hallazgos deben registrarse en la historia clínica del paciente con una descripción 
+                detallada de cada hallazgo: ubicación, tamaño, forma, color y textura. También se deben 
+                registrar las pruebas especiales realizadas.
+              </p>
+
+              {/* Aplicaciones */}
+              <h2 className="text-2xl font-bold text-foreground mt-12 mb-6">
+                Aplicaciones de la exploración clínica
+              </h2>
+
+              <ul className="space-y-3 text-muted-foreground">
+                <li><strong>Diagnóstico de enfermedades orales:</strong> Caries, enfermedades periodontales, infecciones, cáncer oral y trastornos temporomandibulares.</li>
+                <li><strong>Planificación del tratamiento:</strong> Base para planificar el tratamiento adecuado.</li>
+                <li><strong>Seguimiento del tratamiento:</strong> Evaluar progreso y eficacia.</li>
+                <li><strong>Investigación:</strong> Estudiar prevalencia y desarrollar nuevos métodos.</li>
+              </ul>
+
+              {/* Importancia */}
+              <h2 className="text-2xl font-bold text-foreground mt-12 mb-6">
+                Importancia de la exploración clínica
+              </h2>
+
+              <p className="text-muted-foreground">
+                La exploración clínica es parte esencial del examen odontológico, permite detectar 
+                enfermedades en sus primeras etapas, aumentando las posibilidades de un tratamiento 
+                exitoso. Además, es una herramienta valiosa para la promoción de la salud bucal, 
+                identificando factores de riesgo y educando a los pacientes sobre prevención.
+              </p>
+
+              {/* Recomendaciones */}
+              <h2 className="text-2xl font-bold text-foreground mt-12 mb-6">
+                Recomendaciones para una exploración adecuada
+              </h2>
+
+              <ul className="space-y-3 text-muted-foreground">
+                <li><strong>Establecer buena relación con el paciente:</strong> Que se sienta cómodo y colabore.</li>
+                <li><strong>Historia clínica completa:</strong> Antecedentes médicos, odontológicos, hábitos de higiene, consumo de cigarrillo, vape, tabaco, alcohol.</li>
+                <li><strong>Inspección cuidadosa:</strong> Todas las estructuras con luz adecuada.</li>
+                <li><strong>Palpación cuidadosa:</strong> Estructuras bucales y ganglios linfáticos.</li>
+                <li><strong>Pruebas especiales si es necesario:</strong> Punción, sonda, diascopia, citología, cultivo, biopsia.</li>
+                <li><strong>Registro claro y preciso:</strong> Documentar todos los hallazgos.</li>
+              </ul>
+
+              {/* Anatomía específica sections */}
+              <h2 className="text-2xl font-bold text-foreground mt-12 mb-6 flex items-center gap-3">
+                <BookOpen className="h-6 w-6 text-accent" />
+                Examen Clínico de la Mucosa Bucal
+              </h2>
+
+              <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">Límites de la mucosa bucal</h3>
+              <p className="text-muted-foreground">
+                Se extiende desde los límites de la mucosa labial por delante hasta el velo del paladar 
+                por detrás, y desde la línea media del paladar duro hasta la zona retromolar por los lados.
+              </p>
+
+              <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">Anatomía de la mucosa bucal</h3>
+              <p className="text-muted-foreground">
+                Superficie lisa, rosa pálido y húmeda. Firmemente adherida al periostio con rica red vascular. 
+                Se pueden observar:
+              </p>
+              <ul className="space-y-2 text-muted-foreground">
+                <li><strong>Conductos salivales:</strong> Orificios de conductos menores y el conducto de Stenon cerca del segundo molar superior.</li>
+                <li><strong>Papilas:</strong> Filiformes (cónicas) y fungiformes (redondas con yemas gustativas).</li>
+                <li><strong>Frenillos:</strong> Pliegues que unen lengua al piso y labios al maxilar.</li>
+              </ul>
+
+              <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">Hallazgos Normales</h3>
+              <ul className="space-y-2 text-muted-foreground">
+                <li><strong>Color:</strong> Rosa pálido</li>
+                <li><strong>Textura:</strong> Lisa y húmeda</li>
+                <li><strong>Consistencia:</strong> Suave y elástica</li>
+                <li><strong>Vascularización:</strong> Red visible pero no prominente</li>
+                <li><strong>Ausencia de lesiones:</strong> Sin ulceraciones, vesículas, petequias, nódulos ni tumores</li>
+              </ul>
+
+              {/* Labios */}
+              <h2 className="text-2xl font-bold text-foreground mt-12 mb-6">
+                Examen Clínico de los Labios
+              </h2>
+
+              <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">Histología de los Labios</h3>
+              <p className="text-muted-foreground mb-4">
+                Los labios se dividen en tres zonas:
+              </p>
+              <ul className="space-y-2 text-muted-foreground">
+                <li><strong>Porción Cutánea:</strong> Superior desde el subtabique nasal; inferior hasta el surco mento-labial.</li>
+                <li><strong>Porción Semimucosa (Bermellón):</strong> La parte roja, transición entre piel y mucosa. Puede presentar Gránulos de Fordyce.</li>
+                <li><strong>Porción Mucosa:</strong> Interna, rosada, húmeda, con red vascular definida y orificios de glándulas salivales.</li>
+              </ul>
+
+              <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">Clasificación por localización</h3>
+              <ul className="space-y-2 text-muted-foreground">
+                <li><strong>Mucosa de Revestimiento:</strong> Labial, yugal, surcos vestibulares, mucosa alveolar, cara ventral de lengua, piso de boca, paladar blando.</li>
+                <li><strong>Mucosa Masticatoria (Fibromucosa):</strong> Encías y paladar duro.</li>
+                <li><strong>Mucosa Sensorial:</strong> Dorso lingual.</li>
+              </ul>
+
+              {/* Lengua */}
+              <h2 className="text-2xl font-bold text-foreground mt-12 mb-6">
+                Examen Clínico de la Lengua
+              </h2>
+
+              <p className="text-muted-foreground mb-4">
+                La lengua ocupa todo el espacio circunscrito por los rebordes alveodentarios en reposo.
+              </p>
+
+              <ul className="space-y-2 text-muted-foreground">
+                <li><strong>V lingual:</strong> 9-11 papilas caliciformes con vértice hacia la faringe.</li>
+                <li><strong>Dorso:</strong> Aspecto aterciopelado por papilas filiformes.</li>
+                <li><strong>Papilas fungiformes:</strong> Cerca del borde y punta.</li>
+                <li><strong>Papilas foliadas:</strong> Tercio posterior del borde lingual.</li>
+                <li><strong>Cara ventral:</strong> Rosa claro, lisa, con frenillo lingual y vasos raninos.</li>
+              </ul>
+
+              <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">La lengua y el gusto</h3>
+              <ul className="space-y-2 text-muted-foreground">
+                <li><strong>Dulce:</strong> Punta de la lengua (papilas fungiformes)</li>
+                <li><strong>Salado:</strong> Borde lateral y cuerpo</li>
+                <li><strong>Amargo:</strong> Tercio medio posterior (papilas caliciformes)</li>
+                <li><strong>Ácido:</strong> Áreas laterales (papilas foliadas)</li>
+              </ul>
+
+              {/* Piso de boca */}
+              <h2 className="text-2xl font-bold text-foreground mt-12 mb-6">
+                Examen Clínico del Piso de Boca
+              </h2>
+
+              <p className="text-muted-foreground mb-4">
+                Forma de herradura con concavidad hacia arriba. La porción anterior y media es triangular.
+              </p>
+
+              <ul className="space-y-2 text-muted-foreground">
+                <li><strong>Mucosa sublingual:</strong> Fina, rosada, flexible y vascularizada.</li>
+                <li><strong>Frenillo lingual:</strong> En la línea media.</li>
+                <li><strong>Carúnculas salivales:</strong> A cada lado del frenillo, desembocadura del conducto de Wharton.</li>
+                <li><strong>Conductos de Rivinus:</strong> Orificios pequeños hacia los costados.</li>
+              </ul>
+
+              {/* Paladar */}
+              <h2 className="text-2xl font-bold text-foreground mt-12 mb-6">
+                Examen Clínico del Paladar
+              </h2>
+
+              <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">Paladar Duro</h3>
+              <ul className="space-y-2 text-muted-foreground">
+                <li>Color rosa pálido con rafe palatino medio.</li>
+                <li><strong>Papila palatina (incisiva):</strong> Detrás de incisivos centrales.</li>
+                <li><strong>Rugosidades palatinas:</strong> Apoyo para desmenuzamiento del bolo alimenticio.</li>
+                <li>Abundantes glándulas salivales en tercio medio y posterior.</li>
+              </ul>
+
+              <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">Paladar Blando</h3>
+              <ul className="space-y-2 text-muted-foreground">
+                <li>Más rosado que el duro, brillante y liso.</li>
+                <li><strong>Úvula:</strong> En la línea media.</li>
+                <li><strong>Pilares:</strong> Forman el lecho de las amígdalas palatinas.</li>
+                <li><strong>Amígdalas palatinas:</strong> Superficie mamelonada con criptas amigdalinas.</li>
+              </ul>
+
+              {/* Encías */}
+              <h2 className="text-2xl font-bold text-foreground mt-12 mb-6">
+                Examen Clínico de las Encías
+              </h2>
+
+              <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">Encía Libre y Adherida</h3>
+              <ul className="space-y-2 text-muted-foreground">
+                <li><strong>Encía libre:</strong> Desde el borde del cuello dentario hasta la ranura gingival. Lisa, brillante, más rojiza.</li>
+                <li><strong>Encía adherida:</strong> Entre la ranura gingival y el límite mucogingival. Rosada, punteado en cáscara de naranja.</li>
+                <li><strong>Encía papilar:</strong> Papilas interdentarias entre los dientes.</li>
+              </ul>
+
+              <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">Características de una encía sana</h3>
+              <ul className="space-y-2 text-muted-foreground">
+                <li><strong>Color:</strong> Rosado</li>
+                <li><strong>Contorno marginal:</strong> Fino y puntiagudo</li>
+                <li><strong>Textura:</strong> Similar a cáscara de naranja</li>
+                <li><strong>Consistencia:</strong> Firme</li>
+                <li><strong>Surco gingival:</strong> Superficial (1-2 mm)</li>
+              </ul>
+
+              <p className="text-muted-foreground mt-4">
+                Un surco gingival mayor indica una bolsa periodontal, manifestación de enfermedad periodontal.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </Layout>
+  );
+};
+
+export default ExploracionClinica;
