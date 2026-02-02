@@ -18,7 +18,7 @@ export const AboutSection = () => {
   }];
   return <section className="healthcare-section">
       <div className="healthcare-container">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Image/Logo Side */}
           <div className="relative order-2 lg:order-1">
             <div className="relative">
@@ -42,7 +42,7 @@ export const AboutSection = () => {
           </div>
 
           {/* Content Side */}
-          <div className="order-1 lg:order-2 flex flex-col justify-center">
+          <div className="order-1 lg:order-2">
             <span className="text-accent font-medium text-sm uppercase tracking-wider">
               Sobre Mí
             </span>
