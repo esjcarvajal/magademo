@@ -24,7 +24,7 @@ export const AboutSection = () => {
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-bl from-accent/20 to-primary/10 rounded-3xl blur-xl" />
               <div className="relative bg-card rounded-3xl p-12 shadow-card flex items-center justify-center">
-                <img alt="Dra. María Gabriela Castro - Odontólogo" className="w-64 h-auto" src="/lovable-uploads/ec3c67e9-836d-41ff-8c8a-69e51a4a2fe9.jpg" />
+                <img alt="Dra. María Gabriela Castro - Odontólogo" className="max-w-64 h-auto" src="/lovable-uploads/4cc5171b-8f7f-4b54-bfc9-cb46b9af8ce2.png" />
               </div>
             </div>
 
