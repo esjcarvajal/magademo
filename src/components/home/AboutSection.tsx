@@ -27,12 +27,9 @@ export const AboutSection = () => {
                 <img alt="Dra. María Gabriela Castro - Odontólogo" className="w-full h-auto object-contain" src="/lovable-uploads/4cc5171b-8f7f-4b54-bfc9-cb46b9af8ce2.png" />
               </div>
             </div>
-          </div>
 
-          {/* Content Side */}
-          <div className="order-1 lg:order-2 flex flex-col justify-center">
-            {/* Stats Cards - moved above content */}
-            <div className="grid grid-cols-3 gap-4 mb-8">
+            {/* Stats Cards */}
+            <div className="grid grid-cols-3 gap-4 mt-8">
               {credentials.map((cred, index) => {
               const IconComponent = cred.icon;
               return <div key={index} className="bg-card rounded-xl p-4 shadow-soft text-center">
@@ -42,7 +39,10 @@ export const AboutSection = () => {
                   </div>;
             })}
             </div>
-            
+          </div>
+
+          {/* Content Side */}
+          <div className="order-1 lg:order-2 flex flex-col justify-center">
             <span className="text-accent font-medium text-sm uppercase tracking-wider">
               Sobre Mí
             </span>
