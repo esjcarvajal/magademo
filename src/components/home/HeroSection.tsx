@@ -68,7 +68,7 @@ export const HeroSection = () => {
           <div className="relative animate-fade-in hidden lg:block">
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-tr from-accent/30 to-primary/20 rounded-3xl blur-2xl" />
-              <img src={heroImage} alt="Consultorio dental moderno de la Dra. María Gabriela Castro" className="relative rounded-3xl shadow-elevated object-cover w-full h-[500px]" />
+              <img alt="Consultorio dental moderno de la Dra. María Gabriela Castro" className="relative rounded-3xl shadow-elevated object-cover w-full h-[500px]" src="/lovable-uploads/8bd0be7d-f3e4-4eca-97e2-bbd2b101c63f.png" />
               
               {/* Floating Card */}
               <div className="absolute -bottom-6 -left-6 bg-card p-6 rounded-2xl shadow-card">
