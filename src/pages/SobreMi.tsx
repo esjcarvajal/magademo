@@ -2,23 +2,15 @@ import { Layout } from "@/components/layout";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { Award, BookOpen, Users, Heart, GraduationCap, CheckCircle } from "lucide-react";
 import logoSquare from "@/assets/logo-mg-square.png";
-
 const SobreMi = () => {
-  const credentials = [
-    "Odontóloga egresada de la Universidad de Carabobo",
-    "16 años de experiencia profesional",
-    "Docente de Patología Bucal en la UC por 11 años",
-    "Especialista en diagnóstico de lesiones orales",
-    "Formación continua en técnicas modernas",
-    "Miembro activo de sociedades odontológicas"
-  ];
-
-  return (
-    <Layout>
+  const credentials = ["Odontóloga egresada de la Universidad de Carabobo", "16 años de experiencia profesional", "Docente de Patología Bucal en la UC por 11 años", "Especialista en diagnóstico de lesiones orales", "Formación continua en técnicas modernas", "Miembro activo de sociedades odontológicas"];
+  return <Layout>
       {/* Header */}
       <section className="bg-secondary/30 py-16 md:py-24">
         <div className="healthcare-container">
-          <Breadcrumbs items={[{ label: "Sobre Mí" }]} />
+          <Breadcrumbs items={[{
+          label: "Sobre Mí"
+        }]} />
           
           <div className="grid lg:grid-cols-2 gap-12 items-center mt-8">
             <div>
@@ -38,11 +30,7 @@ const SobreMi = () => {
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-tr from-accent/30 to-primary/20 rounded-3xl blur-xl" />
                 <div className="relative bg-card rounded-3xl p-10 shadow-card">
-                  <img 
-                    src={logoSquare} 
-                    alt="Dra. María Gabriela Castro" 
-                    className="w-48 h-auto"
-                  />
+                  <img alt="Dra. María Gabriela Castro" className="w-48 h-auto" src="/lovable-uploads/439af5a2-8f08-432a-b393-bfb3eec730be.png" />
                 </div>
               </div>
             </div>
@@ -54,21 +42,30 @@ const SobreMi = () => {
       <section className="py-12 bg-primary">
         <div className="healthcare-container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { icon: Award, value: "16+", label: "Años de experiencia" },
-              { icon: GraduationCap, value: "11", label: "Años como docente" },
-              { icon: Users, value: "1000+", label: "Pacientes atendidos" },
-              { icon: Heart, value: "100%", label: "Compromiso" },
-            ].map((stat, index) => {
-              const IconComponent = stat.icon;
-              return (
-                <div key={index} className="text-center text-primary-foreground">
+            {[{
+            icon: Award,
+            value: "16+",
+            label: "Años de experiencia"
+          }, {
+            icon: GraduationCap,
+            value: "11",
+            label: "Años como docente"
+          }, {
+            icon: Users,
+            value: "1000+",
+            label: "Pacientes atendidos"
+          }, {
+            icon: Heart,
+            value: "100%",
+            label: "Compromiso"
+          }].map((stat, index) => {
+            const IconComponent = stat.icon;
+            return <div key={index} className="text-center text-primary-foreground">
                   <IconComponent className="h-8 w-8 text-accent mx-auto mb-3" />
                   <p className="font-serif text-3xl md:text-4xl font-bold">{stat.value}</p>
                   <p className="text-sm text-primary-foreground/80">{stat.label}</p>
-                </div>
-              );
-            })}
+                </div>;
+          })}
           </div>
         </div>
       </section>
@@ -117,12 +114,10 @@ const SobreMi = () => {
                   Formación y Credenciales
                 </h3>
                 <ul className="space-y-4">
-                  {credentials.map((credential, index) => (
-                    <li key={index} className="flex items-start gap-3">
+                  {credentials.map((credential, index) => <li key={index} className="flex items-start gap-3">
                       <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                       <span className="text-foreground">{credential}</span>
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
               </div>
 
@@ -157,8 +152,6 @@ const SobreMi = () => {
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default SobreMi;
