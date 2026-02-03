@@ -2,8 +2,9 @@ import { Layout } from "@/components/layout";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { Award, BookOpen, Users, Heart, GraduationCap, CheckCircle } from "lucide-react";
 import logoSquare from "@/assets/logo-mg-square.png";
+import equipoDocente from "@/assets/equipo-docente.png";
 const SobreMi = () => {
-  const credentials = ["Odontóloga egresada de la Universidad de Carabobo", "16 años de experiencia profesional", "Docente de Patología Bucal en la UC por 11 años", "Especialista en diagnóstico de lesiones orales", "Formación continua en técnicas modernas", "Miembro activo de sociedades odontológicas"];
+  const credentials = ["Odontóloga egresada de la Universidad de Carabobo", "16 años de experiencia profesional", "Docente de Patología Bucal en la UC por 11 años", "Formación continua en técnicas modernas", "Miembro activo de sociedades odontológicas"];
   return <Layout>
       {/* Header */}
       <section className="bg-secondary/30 py-16 md:py-24">
@@ -103,6 +104,16 @@ const SobreMi = () => {
                   moderna y un ambiente diseñado para que te sientas cómodo y relajado 
                   durante tu visita.
                 </p>
+              </div>
+              
+              {/* Imagen del equipo docente */}
+              <div className="mt-8 relative">
+                <div className="absolute -inset-2 bg-gradient-to-tr from-accent/20 to-primary/10 rounded-2xl blur-lg" />
+                <img 
+                  src={equipoDocente} 
+                  alt="Equipo docente de la Universidad de Carabobo" 
+                  className="relative w-full h-auto rounded-2xl shadow-card object-cover"
+                />
               </div>
             </div>
 
