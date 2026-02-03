@@ -31,7 +31,7 @@ export const CTASection = () => {
               </Button>
             </Link>
             <a href="tel:+584144402838">
-              <Button size="lg" variant="outline" className="border-2 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 h-14 px-8 text-base">
+              <Button size="lg" variant="outline" className="border-2 border-accent bg-white text-accent hover:bg-accent hover:text-white h-14 px-8 text-base">
                 <Phone className="mr-2 h-5 w-5" />
                 0414-4402838
               </Button>
