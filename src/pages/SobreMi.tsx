@@ -29,8 +29,8 @@ const SobreMi = () => {
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-tr from-accent/30 to-primary/20 rounded-3xl blur-xl" />
-                <div className="relative bg-card rounded-3xl p-10 shadow-card">
-                  <img alt="Dra. María Gabriela Castro" className="w-48 h-auto" src="/lovable-uploads/439af5a2-8f08-432a-b393-bfb3eec730be.png" />
+                <div className="relative bg-card rounded-3xl p-12 shadow-card flex items-center justify-center">
+                  <img alt="Dra. María Gabriela Castro" className="w-full h-auto object-contain" src="/lovable-uploads/439af5a2-8f08-432a-b393-bfb3eec730be.png" />
                 </div>
               </div>
             </div>
