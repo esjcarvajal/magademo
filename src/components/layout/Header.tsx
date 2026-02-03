@@ -98,19 +98,13 @@ export const Header = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden lg:flex items-center gap-4">
-            <a 
-              href="tel:+584144402838" 
-              className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <Phone className="h-4 w-4" />
-              0414-4402838
-            </a>
-            <Link to="/contacto">
+          <div className="hidden lg:flex items-center">
+            <a href="tel:+584144402838">
               <Button className="healthcare-btn-primary">
-                Agendar Cita
+                <Phone className="h-4 w-4 mr-2" />
+                0414-4402838
               </Button>
-            </Link>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -184,18 +178,12 @@ export const Header = () => {
                 )
               ))}
               <div className="pt-4 border-t border-border/50">
-                <a 
-                  href="tel:+584144402838" 
-                  className="flex items-center gap-2 text-sm font-medium text-muted-foreground mb-4"
-                >
-                  <Phone className="h-4 w-4" />
-                  0414-4402838
-                </a>
-                <Link to="/contacto" onClick={() => setMobileMenuOpen(false)}>
+                <a href="tel:+584144402838" onClick={() => setMobileMenuOpen(false)}>
                   <Button className="healthcare-btn-primary w-full">
-                    Agendar Cita
+                    <Phone className="h-4 w-4 mr-2" />
+                    0414-4402838
                   </Button>
-                </Link>
+                </a>
               </div>
             </div>
           </div>
