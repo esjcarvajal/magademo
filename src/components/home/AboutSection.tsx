@@ -13,7 +13,7 @@ export const AboutSection = () => {
     description: "11 años en Patología Bucal"
   }, {
     icon: Users,
-    title: "Miles",
+    title: "Cientos",
     description: "De pacientes satisfechos"
   }];
   return <section className="healthcare-section">
