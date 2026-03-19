@@ -77,10 +77,10 @@ const SectionRenderer = ({ section }: { section: TemaSection }) => {
     case "alert": {
       const variants = {
         warning: {
-          bg: "bg-amber-50 dark:bg-amber-950/30",
-          border: "border-amber-200 dark:border-amber-800",
-          text: "text-amber-900 dark:text-amber-100",
-          icon: <AlertTriangle className="h-5 w-5 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />,
+          bg: "bg-destructive/5",
+          border: "border-destructive/20",
+          text: "text-foreground",
+          icon: <AlertTriangle className="h-5 w-5 text-destructive flex-shrink-0 mt-0.5" />,
         },
         info: {
           bg: "bg-accent/5",
@@ -89,10 +89,10 @@ const SectionRenderer = ({ section }: { section: TemaSection }) => {
           icon: <Info className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />,
         },
         danger: {
-          bg: "bg-red-50 dark:bg-red-950/30",
-          border: "border-red-200 dark:border-red-800",
-          text: "text-red-900 dark:text-red-100",
-          icon: <ShieldAlert className="h-5 w-5 text-red-600 dark:text-red-400 flex-shrink-0 mt-0.5" />,
+          bg: "bg-destructive/10",
+          border: "border-destructive/30",
+          text: "text-foreground",
+          icon: <ShieldAlert className="h-5 w-5 text-destructive flex-shrink-0 mt-0.5" />,
         },
       };
       const v = variants[section.variant || "info"];
