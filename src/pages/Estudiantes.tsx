@@ -4,8 +4,7 @@ import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Download, FileText, Lock } from "lucide-react";
-
-const CORRECT_PASSWORD = "FOUC2026";
+import { useStudentAuth } from "@/contexts/StudentAuthContext";
 
 const downloadableFiles = [
   {
@@ -35,14 +34,13 @@ const downloadableFiles = [
 ];
 
 const Estudiantes = () => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const { isAuthenticated, authenticate } = useStudentAuth();
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === CORRECT_PASSWORD) {
-      setIsAuthenticated(true);
+    if (authenticate(password)) {
       setError("");
     } else {
       setError("Contraseña incorrecta. Intenta de nuevo.");
