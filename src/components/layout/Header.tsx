@@ -19,6 +19,7 @@ const navigation = [
     href: "/estudiantes",
     submenu: [
       { name: "Recursos Descargables", href: "/estudiantes" },
+      { name: "Temas de Clase", href: "/estudiantes/temas" },
       { name: "Medicina en Odontología", href: "/estudiantes/medicina-odontologia" },
       { name: "Libros de Patología Bucal", href: "/estudiantes/libros-patologia" },
       { name: "Exploración Clínica", href: "/estudiantes/exploracion-clinica" },
