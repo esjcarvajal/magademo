@@ -247,10 +247,10 @@ const Contacto = () => {
                   <div>
                     <h3 className="font-semibold text-foreground">Correo</h3>
                     <a 
-                      href="mailto:magacastros0@gmail.com" 
+                      href="mailto:odontologo@magacastro.com" 
                       className="text-accent hover:underline"
                     >
-                      magacastros0@gmail.com
+                      odontologo@magacastro.com
                     </a>
                   </div>
                 </div>
