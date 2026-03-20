@@ -1,44 +1,36 @@
-import { Link, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout";
 import { Button } from "@/components/ui/button";
-import { Home, ArrowLeft } from "lucide-react";
+import { Home } from "lucide-react";
+import draCastroImg from "@/assets/dra-castro-404.jpg";
 
 const NotFound = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    console.error("404 Error: User attempted to access non-existent route:", location.pathname);
-  }, [location.pathname]);
-
   return (
     <Layout>
-      <section className="min-h-[70vh] flex items-center justify-center">
+      <section className="min-h-[70vh] flex items-center justify-center py-16">
         <div className="healthcare-container">
-          <div className="text-center max-w-lg mx-auto">
-            <div className="text-8xl font-serif font-bold text-accent mb-6">404</div>
-            <h1 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Página no encontrada
-            </h1>
-            <p className="text-lg text-muted-foreground mb-8">
-              Lo sentimos, la página que buscas no existe o ha sido movida.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/">
-                <Button className="healthcare-btn-primary">
-                  <Home className="mr-2 h-5 w-5" />
-                  Ir al Inicio
-                </Button>
-              </Link>
-              <Button 
-                variant="outline" 
-                onClick={() => window.history.back()}
-                className="healthcare-btn-secondary"
-              >
-                <ArrowLeft className="mr-2 h-5 w-5" />
-                Volver Atrás
-              </Button>
+          <div className="max-w-2xl mx-auto text-center">
+            <div className="w-40 h-40 rounded-full overflow-hidden mx-auto mb-8 border-4 border-accent/20 shadow-lg">
+              <img
+                src={draCastroImg}
+                alt="Dra. María Gabriela Castro"
+                className="w-full h-full object-cover"
+              />
             </div>
+            <div className="text-7xl font-serif font-bold text-accent mb-4">404</div>
+            <h1 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
+              ¡Ups! Parece que este contenido no está disponible
+            </h1>
+            <p className="text-lg text-muted-foreground mb-8 max-w-md mx-auto">
+              Es posible que la página haya sido movida o que la dirección no sea correcta. 
+              Te invitamos a revisar el enlace o volver al inicio.
+            </p>
+            <Link to="/">
+              <Button className="healthcare-btn-primary gap-2">
+                <Home className="h-5 w-5" />
+                Volver al Inicio
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
