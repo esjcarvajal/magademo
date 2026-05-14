@@ -7,9 +7,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import exploracionImage from "@/assets/exploracion-clinica.png";
-import laminas1 from "@/assets/casos-clinicos-laminas-1.png";
-import laminas2 from "@/assets/casos-clinicos-laminas-2.png";
-import laminas3 from "@/assets/casos-clinicos-laminas-3.png";
 import {
   Stethoscope,
   ClipboardCheck,
@@ -624,13 +621,6 @@ const ExploracionClinica = () => {
                   ))}
                 </div>
 
-                <div className="rounded-2xl overflow-hidden border border-border bg-card">
-                  <img
-                    src={laminas1}
-                    alt="Secuencia de láminas 1 a 6 del esquema de casos clínicos"
-                    className="w-full h-auto"
-                  />
-                </div>
               </div>
 
               {/* Grupo B */}
@@ -662,22 +652,6 @@ const ExploracionClinica = () => {
                   ))}
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div className="rounded-2xl overflow-hidden border border-border bg-card">
-                    <img
-                      src={laminas2}
-                      alt="Secuencia de láminas 7 a 12 del esquema de casos clínicos"
-                      className="w-full h-auto"
-                    />
-                  </div>
-                  <div className="rounded-2xl overflow-hidden border border-border bg-card">
-                    <img
-                      src={laminas3}
-                      alt="Secuencia de láminas 13 a 17 del esquema de casos clínicos"
-                      className="w-full h-auto"
-                    />
-                  </div>
-                </div>
               </div>
 
               {/* Consejos por lámina - Accordion */}
