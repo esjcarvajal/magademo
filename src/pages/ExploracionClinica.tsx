@@ -555,6 +555,237 @@ const ExploracionClinica = () => {
                 Un surco gingival mayor indica una bolsa periodontal, manifestación de enfermedad periodontal.
               </p>
             </div>
+
+            {/* ===================================================== */}
+            {/* CASOS CLÍNICOS - Esquema de presentación              */}
+            {/* ===================================================== */}
+            <div className="mt-20 pt-12 border-t border-border">
+              <div className="text-center mb-10">
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-medium mb-4">
+                  <Presentation className="h-4 w-4" />
+                  Recurso para estudiantes
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                  Esquema para la Presentación de Casos Clínicos
+                </h2>
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                  Para la presentación de los casos clínicos es importante llevar una secuencia lógica,
+                  lo que permite el aprovechamiento óptimo de los recursos, el tiempo y los conocimientos.
+                  En total son <strong>17 láminas</strong> que cubren tanto la historia clínica general
+                  como la historia clínica de patología bucal.
+                </p>
+              </div>
+
+              {/* Stats destacados */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12 not-prose">
+                <div className="bg-card border border-border rounded-xl p-5 text-center">
+                  <Layers className="h-6 w-6 text-accent mx-auto mb-2" />
+                  <div className="text-2xl font-bold text-foreground">17</div>
+                  <div className="text-sm text-muted-foreground">Láminas</div>
+                </div>
+                <div className="bg-card border border-border rounded-xl p-5 text-center">
+                  <Clock className="h-6 w-6 text-accent mx-auto mb-2" />
+                  <div className="text-2xl font-bold text-foreground">10 min</div>
+                  <div className="text-sm text-muted-foreground">Tiempo máximo</div>
+                </div>
+                <div className="bg-card border border-border rounded-xl p-5 text-center">
+                  <BookMarked className="h-6 w-6 text-accent mx-auto mb-2" />
+                  <div className="text-2xl font-bold text-foreground">5+</div>
+                  <div className="text-sm text-muted-foreground">Artículos científicos</div>
+                </div>
+              </div>
+
+              {/* Grupo A */}
+              <div className="mb-12 not-prose">
+                <div className="mb-6">
+                  <span className="inline-block text-xs font-semibold tracking-wider text-accent uppercase mb-2">
+                    Reporte del caso
+                  </span>
+                  <h3 className="text-2xl font-bold text-foreground">
+                    Grupo A — Historia Clínica del Paciente
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Láminas 1 a 6. Introducción al paciente y la patología. Aún no se revela el diagnóstico.
+                  </p>
+                </div>
+
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+                  {laminasGrupoA.map((l) => (
+                    <div
+                      key={l.n}
+                      className="bg-card border-2 border-accent/30 rounded-xl p-5 hover:border-accent transition-colors"
+                    >
+                      <div className="text-xs font-bold text-accent tracking-wider mb-1">
+                        LÁMINA {l.n}
+                      </div>
+                      <div className="font-semibold text-foreground mb-2">{l.label}</div>
+                      <p className="text-sm text-muted-foreground">{l.content}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="rounded-2xl overflow-hidden border border-border bg-card">
+                  <img
+                    src={laminas1}
+                    alt="Secuencia de láminas 1 a 6 del esquema de casos clínicos"
+                    className="w-full h-auto"
+                  />
+                </div>
+              </div>
+
+              {/* Grupo B */}
+              <div className="mb-12 not-prose">
+                <div className="mb-6">
+                  <span className="inline-block text-xs font-semibold tracking-wider text-accent uppercase mb-2">
+                    Reporte · Discusión · Conclusiones
+                  </span>
+                  <h3 className="text-2xl font-bold text-foreground">
+                    Grupo B — Análisis Clínico y Revisión de Literatura
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Láminas 7 a 17. Diagnóstico, tratamiento, literatura científica y conclusiones.
+                  </p>
+                </div>
+
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+                  {laminasGrupoB.map((l) => (
+                    <div
+                      key={l.n}
+                      className="bg-card border-2 border-accent/30 rounded-xl p-5 hover:border-accent transition-colors"
+                    >
+                      <div className="text-xs font-bold text-accent tracking-wider mb-1">
+                        LÁMINA {l.n}
+                      </div>
+                      <div className="font-semibold text-foreground mb-2">{l.label}</div>
+                      <p className="text-sm text-muted-foreground">{l.content}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="rounded-2xl overflow-hidden border border-border bg-card">
+                    <img
+                      src={laminas2}
+                      alt="Secuencia de láminas 7 a 12 del esquema de casos clínicos"
+                      className="w-full h-auto"
+                    />
+                  </div>
+                  <div className="rounded-2xl overflow-hidden border border-border bg-card">
+                    <img
+                      src={laminas3}
+                      alt="Secuencia de láminas 13 a 17 del esquema de casos clínicos"
+                      className="w-full h-auto"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Consejos por lámina - Accordion */}
+              <div className="mb-12 not-prose">
+                <h3 className="text-2xl font-bold text-foreground mb-2">
+                  Consejos por lámina
+                </h3>
+                <p className="text-muted-foreground mb-6">
+                  Recomendaciones específicas para preparar cada diapositiva con rigor académico.
+                </p>
+                <Accordion type="single" collapsible className="bg-card border border-border rounded-xl px-2">
+                  {consejos.map((c, idx) => (
+                    <AccordionItem key={idx} value={`item-${idx}`} className="border-border">
+                      <AccordionTrigger className="px-4 text-left font-semibold text-foreground hover:text-accent">
+                        {c.title}
+                      </AccordionTrigger>
+                      <AccordionContent className="px-4">
+                        <ul className="space-y-2 text-muted-foreground">
+                          {c.items.map((it, i) => (
+                            <li key={i} className="flex gap-2">
+                              <span className="text-accent mt-1.5 flex-shrink-0">•</span>
+                              <span>{it}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </div>
+
+              {/* Normas oficiales */}
+              <div className="bg-healthcare-navy text-healthcare-cream rounded-2xl p-8 md:p-10 not-prose">
+                <h3 className="text-2xl md:text-3xl font-bold mb-6 text-healthcare-turquoise">
+                  Normas oficiales de presentación
+                </h3>
+
+                <div className="space-y-8">
+                  <div>
+                    <h4 className="text-lg font-semibold mb-3 text-white">
+                      ¿Para qué sirve la presentación de casos clínicos?
+                    </h4>
+                    <ul className="space-y-2 text-healthcare-cream/90">
+                      <li>• Adquirir conocimientos de los pacientes atendidos y de los casos de los compañeros.</li>
+                      <li>• Actualizarse en el manejo de nuevos casos, planes de tratamiento y abordaje quirúrgico.</li>
+                      <li>• Plasmar los contenidos teóricos en la práctica clínica.</li>
+                      <li>• Respetar al paciente como ente bio-psico-social con estricta confidencialidad.</li>
+                    </ul>
+                  </div>
+
+                  <div className="border-l-4 border-healthcare-turquoise pl-4 italic text-healthcare-cream/90">
+                    Este esquema es una guía orientativa que puede variar según cada caso. Es fundamental
+                    reunirse con el tutor previo a la presentación, ya que cada docente puede tener
+                    consideraciones específicas para el caso asignado.
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <h4 className="text-lg font-semibold mb-3 text-white">Formato de la presentación</h4>
+                      <ul className="space-y-2 text-healthcare-cream/90 text-sm">
+                        <li><strong className="text-white">Fondo:</strong> Negro o azul marino</li>
+                        <li><strong className="text-white">Texto:</strong> Amarillo o blanco</li>
+                        <li><strong className="text-white">Animaciones:</strong> Evitar las que resten seriedad</li>
+                        <li><strong className="text-white">Tiempo máximo:</strong> 10 minutos</li>
+                        <li><strong className="text-white">Texto:</strong> El mínimo posible; apoyarse en esquemas e imágenes</li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h4 className="text-lg font-semibold mb-3 text-white">Fuentes bibliográficas</h4>
+                      <ul className="space-y-2 text-healthcare-cream/90 text-sm">
+                        <li><strong className="text-white">Mínimo:</strong> 5 artículos científicos</li>
+                        <li><strong className="text-white">Antigüedad máxima:</strong> 5 años</li>
+                      </ul>
+                      <p className="mt-3 text-healthcare-cream/80 text-sm">
+                        <strong className="text-white">Recomendadas:</strong> ODOUS CIENTÍFICA (UC), Ciencia Odontológica (LUZ),
+                        Acta Odontológica Venezolana (UCV), Acta Bioclínica (ULA), LILACS, SCIELO,
+                        SCIENCEDIRECT, BIREME, PUBMED, TRIP.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="text-lg font-semibold mb-3 text-white">Formato de referencias bibliográficas</h4>
+                    <p className="text-healthcare-cream/90 text-sm mb-2">
+                      Normas del Comité de Editores de Revistas Médicas (Vancouver):
+                    </p>
+                    <code className="block bg-black/30 rounded-lg p-3 text-healthcare-turquoise text-xs md:text-sm mb-3">
+                      Apellido N. Título del artículo. Abreviatura de la revista. Año; Volumen(Número): Páginas.
+                    </code>
+                    <p className="text-healthcare-cream/80 text-sm italic">
+                      Ejemplo: Iatta R, Napoli Ch, Borghi E, Montagna MT. Rare mycoses of the oral cavity:
+                      a literature epidemiologic review. <em>Oral Surg Oral Med Oral Pathol Oral Radiol Endod</em>.
+                      2009; 108(5): 647-655.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-lg font-semibold mb-3 text-white">Evaluación</h4>
+                    <p className="text-healthcare-cream/90 text-sm">
+                      La evaluación no se limita a los conocimientos demostrados durante la presentación.
+                      Se evaluará también el proceso completo: análisis del caso, investigación, manejo del
+                      paciente y todo el recorrido clínico.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
